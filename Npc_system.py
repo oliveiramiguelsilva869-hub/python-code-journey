@@ -23,6 +23,8 @@ class Personagem:
             print(f'{self.nome} está comendo!')
             self.energia += 15
             self.fome -= 20
+            if self.fome < 0:
+                self.fome = 0
         else:
             print(f'{self.nome} não está com fome.')
 
@@ -30,6 +32,8 @@ class Personagem:
         print(f'💤 {self.nome} foi dormir e recuperou a energia!')
         self.energia = 100
         self.fome -= 10
+        if self.fome < 0:
+            self.fome = 0
 
 sim1 = Personagem('Carlos','Médico')
 sim2 = Personagem('Amanda', 'Piloto de Fuga')
